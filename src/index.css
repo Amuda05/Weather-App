@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("/src/assets/images.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+h1{
+  text-align: center;
+ margin-top: 2%;
+ font-size: 4rem;
+ font-family: sans-serif;
+ color: dodgerblue;
+}
+
+.img{
+  width: 15%;
+  margin-left: 40rem;
+  margin-top: 2rem;
+}
+.wrap{
+  border: 3.5px solid dodgerblue;
+  width: 40rem;
+  margin-left: 28rem;
+  padding: .7rem;
+  border-radius: .4rem;
+}
+input {
+  width: 30rem;
+  padding: .3rem;
+  font-size:1.2rem;
+  text-transform: capitalize;
+  border: 3px solid dodgerblue;
+  outline: none;
+  border-radius: .4rem;
+  margin-left: 25rem;
+margin-top: 1rem;
+}
+.wrap img {
+  margin-left: 2rem;
+}
+
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 40rem;
+}
+
+.weather-box .weather {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  margin-left: 41rem;
+}
+.location-box{
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
