@@ -25,31 +25,29 @@ const App = () => {
  
 
   const search = evt => {
-    if (evt.key === "Enter") {
+    evt.preventDefault()
       fetch(`${api.base}weather?q=${query}&appid=${api.key}&units=metric`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
-          setQuery('');
-          console.log(result);
+          // console.log(result);
         });
-    }
+    
   }
   return (
     <>
     <h1>Welcome to my weather App</h1>
      <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
-        <div className="search-box">
+        <form className="search-box" onSubmit={search}>
           <input 
             type="text"
             className="search-bar"
             placeholder="Search..."
             onChange={e => setQuery(e.target.value)}
             value={query}
-            onKeyPress={search}
           />
-        </div>
+        </form>
         {(typeof weather.main != "undefined") ? (
         <div>
           <div className="location-box">
@@ -66,8 +64,6 @@ const App = () => {
         ) : ('')}
       </main>
     </div>
-
-    
     </>
   )
 }
